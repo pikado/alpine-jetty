@@ -20,7 +20,7 @@ ENV JETTY_VERSION 9.3.8
 ENV JETTY_RELEASE_DATE v20160314
 ENV JETTY_HOME /usr/local/jetty
 RUN curl -sO http://download.eclipse.org/jetty/stable-9/dist/jetty-distribution-${JETTY_VERSION}.${JETTY_RELEASE_DATE}.tar.gz && \
-    tar -xz jetty-distribution-${JETTY_VERSION}.${JETTY_RELEASE_DATE}.tar.gz -C /usr/local && \
+    tar -xzf jetty-distribution-${JETTY_VERSION}.${JETTY_RELEASE_DATE}.tar.gz -C /usr/local && \
     rm -f jetty-distribution-${JETTY_VERSION}.${JETTY_RELEASE_DATE}.tar.gz && \
     ln -s /usr/local/jetty-distribution-${JETTY_VERSION}.${JETTY_RELEASE_DATE} $JETTY_HOME
 
